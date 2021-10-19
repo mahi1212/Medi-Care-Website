@@ -1,0 +1,40 @@
+.banner-text {
+    position: absolute;
+    margin-top: 6rem;
+    color: rgb(20, 27, 124);
+    text-transform: uppercase;
+    margin-left: 100px;
+}
+
+.link {
+    position: absolute;
+    margin-top: -7rem;
+    margin-left: 5rem;
+}
+
+.btn-list button {
+    background-color: indigo;
+    color: #fff;
+    border: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner-text {
+        margin-top: 4rem;
+        margin-left: 1rem;
+    }
+    .banner-text h2,
+    h4 {
+        font-size: 1rem;
+    }
+    .link {
+        content: "";
+        margin-left: 1rem;
+        margin-top: -2rem;
+    }
+
+    .btn-list {
+        position: relative;
+        margin-top: 10rem;
+    }
+}
