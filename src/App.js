@@ -10,6 +10,7 @@ import Reviews from './components/Reviews/Reviews';
 import AboutUs from './components/AboutUs/AboutUs';
 import Login from './components/Login/Login';
 import AuthProvider from './contexts/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -27,9 +28,9 @@ function App() {
             <Route path='/services'>
               <Services></Services>
             </Route>
-            <Route path='/service/:idNumber'>
+            <PrivateRoute path='/service/:idNumber'>
               <Details></Details>
-            </Route>
+            </PrivateRoute>
             <Route path='/reviews'>
               <Reviews></Reviews>
             </Route>

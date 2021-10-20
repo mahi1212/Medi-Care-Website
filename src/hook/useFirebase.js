@@ -7,37 +7,34 @@ initializeAuthentication()
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const auth = getAuth()
-
+    
     const signInUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 setUser(result.user)
-                // const user = result.user;
-
             }).catch((error) => {
                 alert(error.message)
-            });
+            })
     }
-
-    useEffect( ()=>{
+    
+    useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
-              setUser(user)
+                setUser(user)
             } else {
-              setUser({})
+                setUser({})
             }
-          });
-          return ()=> unsubscribed
+        });
+        return () => unsubscribed
     }, [])
 
     const logOut = () => {
-        signOut(auth)
-            .then(() => {
+        signOut(auth).then(() => {
 
-            }).catch((error) => {
-                alert(error.message)
-            });
+        }).catch((error) => {
+            alert(error.message)
+        })
     }
     return {
         user,
