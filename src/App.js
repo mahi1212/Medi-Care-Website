@@ -5,6 +5,7 @@ import Services from './components/Services/Services';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Error from './components/ErrorPage/Error';
+import Details from './components/Details/Details';
 
 function App() {
   return (
@@ -20,6 +21,12 @@ function App() {
           </Route>
           <Route path='/services'>
             <Services></Services>
+          </Route>
+          <Route path='/service/:idNumber'>
+            <Details></Details>
+          </Route>
+          <Route path='/reviews'>
+            
           </Route>
           <Route path='*'>
             <Error></Error>

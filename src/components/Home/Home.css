@@ -18,7 +18,7 @@
     border: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 300px) {
     .banner-text {
         margin-top: 4rem;
         margin-left: 1rem;
@@ -37,4 +37,11 @@
         position: relative;
         margin-top: 10rem;
     }
+}
+@media only screen and (max-width: 678px) {
+    .banner-text {
+        margin-top: 7rem;
+        margin-left: 2rem;
+    }
+    
 }

@@ -28,7 +28,6 @@ const Footer = () => {
                         <li>
                             <i className="fas fa-envelope my-2"><span className='mx-3 text-warning'> devmad@gmail.com</span></i>
                         </li>
-
                     </ul>
                 </div>
             </div>
