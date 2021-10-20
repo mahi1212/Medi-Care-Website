@@ -6,34 +6,46 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Error from './components/ErrorPage/Error';
 import Details from './components/Details/Details';
+import Reviews from './components/Reviews/Reviews';
+import AboutUs from './components/AboutUs/AboutUs';
+import Login from './components/Login/Login';
+import AuthProvider from './contexts/AuthProvider';
 
 function App() {
   return (
     <div>
-      <Router>
-      <Header></Header>
-        <Switch>
-          <Route exact path='/'>
-            <Home></Home>
-          </Route>
-          <Route path='/home'>
-            <Home></Home>
-          </Route>
-          <Route path='/services'>
-            <Services></Services>
-          </Route>
-          <Route path='/service/:idNumber'>
-            <Details></Details>
-          </Route>
-          <Route path='/reviews'>
-            
-          </Route>
-          <Route path='*'>
-            <Error></Error>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path='/'>
+              <Home></Home>
+            </Route>
+            <Route path='/home'>
+              <Home></Home>
+            </Route>
+            <Route path='/services'>
+              <Services></Services>
+            </Route>
+            <Route path='/service/:idNumber'>
+              <Details></Details>
+            </Route>
+            <Route path='/reviews'>
+              <Reviews></Reviews>
+            </Route>
+            <Route path='/about'>
+              <AboutUs></AboutUs>
+            </Route>
+            <Route path='/login'>
+              <Login></Login>
+            </Route>
+            <Route path='*'>
+              <Error></Error>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
