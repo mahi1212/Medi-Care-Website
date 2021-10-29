@@ -7,7 +7,7 @@ const Details = () => {
     const { idNumber } = useParams()
     const [det, setDet] = useState({})
     useEffect(() => {
-        const url = `https://raw.githubusercontent.com/mahi1212/fakemediservice${idNumber}/main/mediserv.json`
+        const url = `https://raw.githubusercontent.com/mahi1212/fakemediService/main/mediserve${idNumber}.json`
         fetch(url)
             .then(res => res.json())
             .then(data => setDet(data[0]))
