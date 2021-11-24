@@ -1,4 +1,5 @@
-# Medi Care App. Live Link : https://jovial-goldwasser-e9bc23.netlify.app/
+# Name : Medi Care.
+## Live Link : https://jovial-goldwasser-e9bc23.netlify.app/
 
 App Name : Medi Care
 App purpose  :
